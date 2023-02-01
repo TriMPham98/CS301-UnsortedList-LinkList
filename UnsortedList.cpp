@@ -24,9 +24,16 @@ int UnsortedList<T>::GetLength() const {
 
 template<class T>
 bool UnsortedList<T>::Contains(T someItem) {
-    return false;
-}
+    Node *currN = head;
 
+    while (currN != nullptr) {
+        if (currN->value == someItem) {
+            return true;
+        }
+        currN = currN->next;
+    }
+    return  false;
+}
 template<class T>
 void UnsortedList<T>::AddItem(T item) {
     Node * nodeToInsert = new Node;
