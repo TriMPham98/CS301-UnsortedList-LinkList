@@ -19,7 +19,7 @@ bool UnsortedList<T>::IsFull() const {
 
 template<class T>
 int UnsortedList<T>::GetLength() const {
-    return 0;
+    return length;
 }
 
 template<class T>
@@ -28,8 +28,12 @@ bool UnsortedList<T>::Contains(T someItem) {
 }
 
 template<class T>
-void UnsortedList<T>::PutItem(T item) {
-
+void UnsortedList<T>::AddItem(T item) {
+    Node * nodeToInsert = new Node;
+    nodeToInsert->value = item;
+    nodeToInsert->next = head;
+    head = nodeToInsert;
+    ++length;
 }
 
 template<class T>
