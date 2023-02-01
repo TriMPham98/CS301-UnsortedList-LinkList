@@ -45,7 +45,25 @@ void UnsortedList<T>::AddItem(T item) {
 
 template<class T>
 void UnsortedList<T>::DeleteItem(T item) {
+    Node *currN = head;
+    Node* prevN = nullptr;
 
+    while (currN != nullptr) {
+        if (currN->value == item) {
+
+            if (prevN != nullptr) {
+                prevN = currN->next;
+            } else {
+                head = currN->next;
+            }
+
+            delete currN;
+            --length;
+            break; // Deletes the first copy
+        }
+        prevN = currN;
+        currN = currN->next;
+    }
 }
 
 template<class T>
