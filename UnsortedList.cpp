@@ -2,7 +2,9 @@
 
 template<class T>
 UnsortedList<T>::UnsortedList() {
-
+    length = 0;
+    head = nullptr;
+    currPos = nullptr;
 }
 
 template<class T>
