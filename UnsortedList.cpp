@@ -8,6 +8,11 @@ UnsortedList<T>::UnsortedList() {
 }
 
 template<class T>
+UnsortedList<T>::~UnsortedList() {
+    MakeEmpty();
+}
+
+template<class T>
 void UnsortedList<T>::MakeEmpty() {
     while (head != nullptr){
         Node* temp = head;
@@ -89,3 +94,5 @@ T UnsortedList<T>::GetNextItem() {
     currPos = currPos->next;
     return itemToReturn;
 }
+
+
