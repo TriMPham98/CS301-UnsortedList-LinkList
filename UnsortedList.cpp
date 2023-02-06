@@ -80,10 +80,12 @@ void UnsortedList<T>::DeleteItem(T item) {
 
 template<class T>
 void UnsortedList<T>::ResetIterator() {
-
+    currPos = head;
 }
 
 template<class T>
 T UnsortedList<T>::GetNextItem() {
-    return T();
+    T itemToReturn = currPos->value;
+    currPos = currPos->next;
+    return itemToReturn;
 }
