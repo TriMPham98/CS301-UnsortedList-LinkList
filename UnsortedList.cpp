@@ -9,54 +9,54 @@ UnsortedList<T>::UnsortedList() {
 
 template<class T>
 UnsortedList<T>::UnsortedList(const UnsortedList<T> &otherList) {
-    length = otherList.length;
-
-    if (otherList.head == nullptr) {
-        head = nullptr;
-        return;
-    }
-
-    head = new Node;
-    head = otherList.head->value;
-    head->next = nullptr;
-
-    Node *ptr1 = otherList.head->next;
-    Node *ptr2 = head;
-
-    while (ptr1 != nullptr) {
-        ptr2->next = new Node;
-        (ptr2->next)->value = ptr1->value;
-        (ptr2->next)->next = nullptr;
-        ptr1 = ptr1->next;
-        ptr2 = ptr2->next;
-    }
+//    length = otherList.length;
+//
+//    if (otherList.head == nullptr) {
+//        head = nullptr;
+//        return;
+//    }
+//
+//    head = new Node;
+//    head = otherList.head->value;
+//    head->next = nullptr;
+//
+//    Node *ptr1 = otherList.head->next;
+//    Node *ptr2 = head;
+//
+//    while (ptr1 != nullptr) {
+//        ptr2->next = new Node;
+//        (ptr2->next)->value = ptr1->value;
+//        (ptr2->next)->next = nullptr;
+//        ptr1 = ptr1->next;
+//        ptr2 = ptr2->next;
+//    }
 }
 
 template<class T>
 UnsortedList<T>::~UnsortedList() {
-    MakeEmpty();
+//    MakeEmpty();
 }
 
 template<class T>
 void UnsortedList<T>::MakeEmpty() {
-    while (head != nullptr) {
-        Node *temp = head;
-        head = head->next;
-        delete temp;
-    }
-    length = 0;
+//    while (head != nullptr) {
+//        Node *temp = head;
+//        head = head->next;
+//        delete temp;
+//    }
+//    length = 0;
 }
 
 template<class T>
 bool UnsortedList<T>::IsFull() const {
-    try {
-        Node *temp = new Node;
-        delete temp;
-    }
-    catch (std::bad_alloc error) { // Not able to allocate memory
-        return true;
-    }
-    return false;
+//    try {
+//        Node *temp = new Node;
+//        delete temp;
+//    }
+//    catch (std::bad_alloc error) { // Not able to allocate memory
+//        return true;
+//    }
+//    return false;
 }
 
 template<class T>
@@ -94,9 +94,9 @@ void UnsortedList<T>::DeleteItem(T item) {
     while (currN != nullptr) {
         if (currN->value == item) {
 
-            if (prevN != nullptr) {
-                prevN = currN->next;
-            } else {
+            if (prevN != nullptr) { // Middle
+                prevN->next = currN->next;
+            } else { // Head: prevN is nullptr
                 head = currN->next;
             }
 
@@ -116,9 +116,9 @@ void UnsortedList<T>::ResetIterator() {
 
 template<class T>
 T UnsortedList<T>::GetNextItem() {
-    T itemToReturn = currPos->value;
-    currPos = currPos->next;
-    return itemToReturn;
+//    T itemToReturn = currPos->value;
+//    currPos = currPos->next;
+//    return itemToReturn;
 }
 
 
