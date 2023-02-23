@@ -93,16 +93,14 @@ void UnsortedList<T>::DeleteItem(T item) {
 
     while (currN != nullptr) {
         if (currN->value == item) {
-
-            if (prevN != nullptr) { // Middle
+            if (prevN != nullptr) {
                 prevN->next = currN->next;
-            } else { // Head: prevN is nullptr
+            } else {
                 head = currN->next;
             }
-
             delete currN;
             --length;
-            break; // Deletes the first copy
+            break;
         }
         prevN = currN;
         currN = currN->next;
