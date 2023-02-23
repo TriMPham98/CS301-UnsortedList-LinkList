@@ -114,9 +114,9 @@ void UnsortedList<T>::ResetIterator() {
 
 template<class T>
 T UnsortedList<T>::GetNextItem() {
-//    T itemToReturn = currPos->value;
-//    currPos = currPos->next;
-//    return itemToReturn;
+    T itemToReturn = currPos->value;
+    currPos = currPos->next;
+    return itemToReturn;
 }
 
 
