@@ -47,14 +47,13 @@ void UnsortedList<T>::MakeEmpty() {
 
 template<class T>
 bool UnsortedList<T>::IsFull() const {
-//    try {
-//        Node *temp = new Node;
-//        delete temp;
-//    }
-//    catch (std::bad_alloc error) { // Not able to allocate memory
-//        return true;
-//    }
-//    return false;
+    try {
+        Node *temp = new Node;
+        delete temp;
+    } catch (std::bad_alloc error) {
+        return true;
+    }
+    return false;
 }
 
 template<class T>
