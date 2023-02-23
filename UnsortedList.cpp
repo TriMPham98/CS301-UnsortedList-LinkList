@@ -39,12 +39,12 @@ UnsortedList<T>::~UnsortedList() {
 
 template<class T>
 void UnsortedList<T>::MakeEmpty() {
-//    while (head != nullptr) {
-//        Node *temp = head;
-//        head = head->next;
-//        delete temp;
-//    }
-//    length = 0;
+    while (head != nullptr) {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+    length = 0;
 }
 
 template<class T>
