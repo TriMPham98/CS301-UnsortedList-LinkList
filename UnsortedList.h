@@ -11,8 +11,6 @@ public:
 
     ~UnsortedList();
 
-    virtual ~UnsortedList();
-
     void MakeEmpty();
     // Function: Returns the list to the empty state.
     // Post:  List is empty.

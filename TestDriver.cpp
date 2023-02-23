@@ -92,7 +92,7 @@ int main()
             }
 		}
 		else if (command == "MakeEmpty") {
-			out << "Make list empty." << endl;
+			cout << "Make list empty." << endl;
 			outFile << "Make list empty." << endl;
 			list.MakeEmpty();
 		}
