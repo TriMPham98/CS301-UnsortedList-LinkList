@@ -34,7 +34,7 @@ UnsortedList<T>::UnsortedList(const UnsortedList<T> &otherList) {
 
 template<class T>
 UnsortedList<T>::~UnsortedList() {
-//    MakeEmpty();
+    MakeEmpty();
 }
 
 template<class T>
@@ -66,15 +66,7 @@ int UnsortedList<T>::GetLength() const {
 
 template<class T>
 bool UnsortedList<T>::Contains(T someItem) {
-    Node *currN = head;
 
-    while (currN != nullptr) {
-        if (currN->value == someItem) {
-            return true;
-        }
-        currN = currN->next;
-    }
-    return false;
 }
 
 template<class T>
