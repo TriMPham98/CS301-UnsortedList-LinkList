@@ -7,8 +7,6 @@ public:
     UnsortedList();
     // Constructor
 
-    UnsortedList(const UnsortedList<T> &otherList);
-
     ~UnsortedList();
 
     void MakeEmpty();
