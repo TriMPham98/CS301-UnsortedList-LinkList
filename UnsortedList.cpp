@@ -85,6 +85,9 @@ void UnsortedList<T>::ResetIterator() {
 
 template<class T>
 T UnsortedList<T>::GetNextItem() {
+    if (currPos == nullptr || currPos->next == nullptr) {
+        throw "Out of bounds";
+    }
     T itemToReturn = currPos->value;
     currPos = currPos->next;
     return itemToReturn;
